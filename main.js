@@ -2,7 +2,7 @@ let containerEl = document.querySelector(".container");
 let cardNums = 32;
 let refreshBtn = document.getElementById("refresh");
 
-window.addEventListener("load", makeTheCards)
+makeTheCards()
 refreshBtn.addEventListener("click", makeTheCards)
 
 
@@ -17,5 +17,13 @@ function makeTheCards(){
         containerEl.appendChild(color)
         color.innerHTML = `<div class="color-box" style="background-color:#${hexCode};"></div>
                             <div class="hex">#${hexCode}</div>`
+        color.addEventListener("click", ()=>{ copiedEffect(hexCode, color) })
     }
+}
+
+function copiedEffect(hex, color){
+    navigator.clipboard.writeText("#" + hex)
+    let hexEl = color.querySelector(".hex")
+    hexEl.innerHTML = "COPIED"
+    setTimeout(()=>{hexEl.innerHTML = `#${hex}`}, 1000)
 }

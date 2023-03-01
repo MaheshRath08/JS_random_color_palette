@@ -3,6 +3,9 @@
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+body{
+    background-color: #c3ecff;
+}
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -11,8 +14,8 @@
 .color{
     list-style-type: none;
     margin: 1rem;
-    padding: 1rem;
-    background-color: #d1d1d1;
+    padding: 0.4rem;
+    background-color: #f8f8f8;
     border-radius: 1rem;
     cursor: pointer;
 }
@@ -28,7 +31,7 @@
 }
 #refresh{
     position: absolute;
-    margin-top: 2rem;
+    margin-top: 2rem 0;
     left: 50%;
     transform: translate(-50%);
     font-size: 1.1rem;
